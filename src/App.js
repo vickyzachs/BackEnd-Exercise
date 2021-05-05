@@ -1,37 +1,51 @@
 import { Component } from 'react';
-import './App.css';
-import Dashboard from './Pages/Dashboard';
-import Welcome from "./Components/Welcome";
+import ListStudent from './Components/ListStudent';
 
-// function App() {
-//   const student1="John";
-//   // const student2="Jane";
-//   // const student3="Bob";
-
-//   return (
-//     // <>
-//     // <Dashboard />
-//     // </>
-//     <>
-//       <h1>Hello World</h1>
-//       <h3>Welcome {student1}</h3>
-//       {/* <h3>Welcome {student2}</h3>
-//       <h3>Welcome {student3}</h3> */}
-//     </>
-    
-//   );
-// }
-
-
+//LOOPING
 class App extends Component {
+  state ={
+    isShow: false,
+  }
+
+  toggleButton = () => {
+    this.setState({isShow: !this.state.isShow});
+  }
   render(){
-    const FullName ="John Doe";
+    const backend = [
+      {
+        name:'john',
+        address:'manado',
+      },
+      {
+        name:'Jane',
+        address:'Airmadidi',
+      },
+      {
+        name:'bob',
+        address:'Tondano',
+      },
+    ];
+  const webprogramming = [
+      {
+          name:'Albert',
+          address:'manado',
+      },
+      {
+          name:'Tono',
+          address:'Airmadidi',
+      },
+      {
+          name:'Anton',
+          address:'Tondano',
+      },
+  ];
     return(
     <>
-       <h1>Hello World</h1>
-       <Welcome />
-       <Welcome />
-       <Welcome />
+    {this.state.isShow &&(
+       <ListStudent title="Back-end Programming Class" students={backend}/>
+       )}
+       {/* <ListStudent title="Web Programming Class" students={webprogramming}/> */}
+       <button onClick={this.toggleButton}>Toggle List Button</button>
    </>
     );
   };
