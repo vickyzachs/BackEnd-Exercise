@@ -1,25 +1,40 @@
-import logo from './logo.svg';
+import { Component } from 'react';
 import './App.css';
+import Dashboard from './Pages/Dashboard';
+import Welcome from "./Components/Welcome";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+// function App() {
+//   const student1="John";
+//   // const student2="Jane";
+//   // const student3="Bob";
+
+//   return (
+//     // <>
+//     // <Dashboard />
+//     // </>
+//     <>
+//       <h1>Hello World</h1>
+//       <h3>Welcome {student1}</h3>
+//       {/* <h3>Welcome {student2}</h3>
+//       <h3>Welcome {student3}</h3> */}
+//     </>
+    
+//   );
+// }
+
+
+class App extends Component {
+  render(){
+    const FullName ="John Doe";
+    return(
+    <>
+       <h1>Hello World</h1>
+       <Welcome />
+       <Welcome />
+       <Welcome />
+   </>
+    );
+  };
+};
 
 export default App;
