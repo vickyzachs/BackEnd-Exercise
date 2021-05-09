@@ -26,18 +26,27 @@ const Login = ({title,angka}) => {
 
     return (
         //JSX
-        <div>
+        <div className="container mt-5">
             <h3>{welcomeText}</h3>
             <h5>
                 {title} {angka}
             </h5>
-            <p>Email</p>
-            <input placeholder="Masukkan Email" value={email} onChange={(e) => setEmail(e.target.value)}/>
-            <p>Password</p>
-            <input placeholder="Masukkan Password" type="password" value={password} onChange={(e) => setPassword(e.target.value)}/>
+            <p className="form-label mt-5">Email</p>
+            <input 
+                className="form-control"
+                placeholder="Masukkan Email" 
+                value={email} 
+                onChange={(e) => setEmail(e.target.value)}
+            />
+            <p className="form-label">Password</p>
+            <input 
+                className="form-control"
+                placeholder="Masukkan Password" 
+                type="password" 
+                value={password} onChange={(e) => setPassword(e.target.value)}/>
             <br/>
             <br/>
-            <button type="button" onClick={handleSubmit}>Sign In</button>
+            <button type="button" class="btn btn-primary" onClick={handleSubmit}>Sign In</button>
         </div> 
     )
 }
