@@ -5,7 +5,9 @@ const Dashboard = () => {
     return (
         <div>
             <NavBar />
-            <h3>Dashboard</h3>
+            <h3>Etalase</h3>
+            <br/>
+            <button type="button" class="btn btn-primary" onClick={onsubmit}>Stock Voucher</button>
         </div>
     );
 };

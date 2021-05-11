@@ -7,6 +7,7 @@ import  {
 import About from '../../Pages/About';
 import Dashboard from '../../Pages/Dashboard';
 import Login from '../../Pages/Login';
+import Register from '../../Pages/Register';
 
 
 
@@ -23,6 +24,9 @@ const Routes = () => {
             </Route>
             <Route path="/about">
                 <About />
+            </Route>
+            <Route path="/register">
+                <Register />
             </Route>
         </Switch>
         </Router>
