@@ -40,6 +40,10 @@ export const Register = () => {
     // show Error Msg
   });
     };
+    const onLogin = () =>
+ {
+     history.push('/login');
+ }
 
     return (
         <div className="container mt-5">
@@ -69,6 +73,10 @@ export const Register = () => {
         <br />
         <button type="button" onClick={onSubmit} className="btn btn-primary">
             Register
+        </button>
+        <br/>
+        <button type="button" onClick={onLogin} className="btn btn-secondary">
+            Login
         </button>
         </div>
     )

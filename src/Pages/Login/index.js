@@ -5,7 +5,7 @@ import {useHistory} from 'react-router-dom';
 
 const Login = ({title,angka}) => {
 
-    const [welcomeText, setWelcomeText] = useState("Welcome!!!");
+    const [welcomeText, setWelcomeText] = useState("Stock Voucher");
     const [email, setEmail] = useState ("");
     const [password, setPassword] = useState ("");
 
@@ -31,8 +31,10 @@ const Login = ({title,angka}) => {
         console.log("Component did update")
     }, [welcomeText])
 
-    
-    
+    const registrasi = () =>
+ {
+     history.push('/register');
+ }    
 
     return (
         //JSX
@@ -57,6 +59,8 @@ const Login = ({title,angka}) => {
             <br/>
             <br/>
             <button type="button" class="btn btn-primary" onClick={handleSubmit}>Sign In</button>
+            <br />
+            <button type="button" class="btn btn-secondary" onClick={registrasi}>Registrasi</button>
         </div> 
     )
 }
